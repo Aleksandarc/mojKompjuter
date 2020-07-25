@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap");
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+body{
+  background-color: rgb(223, 223, 223);
+}
+
+.admin-main-nav{
+  height: 5vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+  text-transform: uppercase;
+}
+
+.admin-nav-btn{
+  color: #fffffc;
+  text-decoration: none;
+  padding: 0 25px;
+  font-size: 22px;
+  font-family: "Poppins", sans-serif; 
+  transition: all .3s ease 0s;
+  border: none;
+  margin: 0 5px;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.admin-nav-btn:hover{
+  border-radius: 25px;
+  transform: translateY(-2px);
+  box-shadow: .5rem .5rem 2rem rgba(0,0,0,0.2);
+}
+
+.admin-nav-btn:focus{
+  outline: none;
+}
+
+.korisnici-panel, .proizvodi-panel{
+  display: none;
+  width: 80%;
+  height: auto;
+  background-color: #333;
+  margin: 3% auto;
+  transition: all 0.5s ease-in;
+  grid-template-columns: 1fr 2fr;
+}
+
+.korisnici-panel-unos, .proizvodi-panel-unos{
+  background-color: #999;
+  padding: 4%;
+}
+
+.korisnici-panel-prikaz, .proizvodi-panel-prikaz{
+  background-color: rgb(180, 180, 180);
+  padding: 4%;
+  padding-top: 2%;
+}
+
+.form-registracija input,  .form-registracija button{
+  margin: 5px auto;
+  width: 100%;
+  height: 4vh;
+  font-size: 16px;
+  padding: 15px;
+  transition: all 0.2s ease;
+  font-family: "Lato", serif;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+
+.form-registracija input:focus, .form-registracija input:hover{
+  outline: none;
+  border-radius: 2rem;
+  border: 2px solid #1781d5;
+}
+
+.form-registracija button{
+  cursor: pointer;
+  transition: all .3s ease 0s;
+  border: none;
+  font-family: "Poppins", sans-serif; 
+  font-size: 18px;
+  padding: 0;
+  transition: all 0.3s;
+}
+
+.form-registracija button:hover{
+  background-color: #1781d5;
+  border-radius: 25px;
+  outline: none;
+}
+
+.korisnici-panel h2, .korisnici-panel-prikaz h2, .proizvodi-panel h2, .proizvodi-panel-prikaz h2{
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-size: 22px;
+  width: 100%;
+}
+
+.korisnici-table{
+  padding: 1rem;
+  width: 100%;
+  font-size: 16px;
+  font-family: "Lato", serif;
+  border-collapse: collapse;
+  border-radius: 2rem;
+}
+
+.korisnici-table tr:first-child td{
+  border-bottom: 1px solid #1781d5;
+  border-top: 1px solid #1781d5;
+  padding: 5px 0;
+}
+.korisnici-table tr td:first-child{
+  width: 35px;
+  text-align: center;
+}
+
+.korisnici-table tr td:last-child{
+  width: 40%;
+  text-align: center;
+  padding: 10px;
+}
+
+.korisnici-table td{
+  padding: 5px;
+  border: none;
+}
+
+.korisnici-table tr, .proizvodi-table tr{
+  border-bottom: 1px solid #ccc;
+}
+
+.korisnici-table tr:nth-child(odd), .proizvodi-table tr:nth-child(odd){
+  background-color: #FBFBFE;
+  color: #BBBBBF;
+}
+
+.korisnici-table tr:nth-child(even), .proizvodi-table tr:nth-child(even){
+  background-color: #FFFFFF;
+  color: #B0AFB2;
+}
+
+.akcija-dugme{
+  padding: 5px;
+  margin: 0 5px;
+  color: #fffff1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 5px auto;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.akcija-dugme:hover{
+  transform: translateY(-2px);
+  box-shadow: .5rem .5rem 2rem rgba(0,0,0,0.2);
+}
+
+.obrisi{
+  background-color: #b62323;
+  border-radius: 10px;
+}
+
+.detalji{
+  background-color: #1781d5;
+  border-radius: 10px;
+}
+
+.izmeni{
+  background-color: #11832d;
+  border-radius: 10px;
+}
+
+.proizvodi-panel{
+  display: none;
+  grid-template-columns: 1fr;
+}
+
+.proizvodi-panel .akcija-dugme{
+  width: 100%;
+}
+
+.proizvodi-table{
+  width: 100%;
+  border: 0;
+  border-collapse: collapse;
+}
+
+.proizvodi-table tr:nth-child(1){
+  font-size: 20px;
+}
+.proizvodi-table td{
+  padding: 5px;
+  border: none;
+  outline: none;
+  
+}
+.proizvodi-table img{
+  width: 100%;
+  height: auto;
+}
+
+.proizvodi-table td:nth-child(1), .proizvodi-table td:nth-child(4), .proizvodi-table td:nth-child(7){
+  width: 3%;
+  text-align: center;
+}
+
+.proizvodi-table td:last-child{
+  width: 5vw;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.proizvodi-table td:nth-child(5){
+  overflow: hidden;
+}
+
+.proizvodi-table td:nth-child(2){
+  max-width: 4vw;
+  height: auto;
+}
+
+.izmeni-proizvod{
+  background-color: yellow;
+  color: #333;
+}
+
+.unesi-proizvod{
+  background-color: green;
+  color: #f1f1f1;
+}

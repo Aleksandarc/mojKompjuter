@@ -1,0 +1,776 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #777;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;;
+}
+
+body{
+  height: 100%;
+}
+
+#main{
+  min-height: 100%;
+  overflow: auto;
+  padding-bottom: 100px;
+}
+
+.main-wrapper {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+
+.category-nav{
+  position: fixed;
+  border-right: 1px solid #ccc;
+  width: 10%;
+  height: auto;
+}
+
+.side-category-nav{
+  display: absolute;
+  flex-direction: column;
+  padding: .8rem;
+  font-size: 1.3vw;
+}
+
+.side-category-nav li{
+  margin: .2rem 0;
+  width: 100%;
+  padding: 1rem;
+}
+
+.side-category-nav li{
+  color: #111;
+  padding: 1rem; 
+}
+
+.side-category-nav li:hover{
+  /* border-left: 5px solid #1781d5; */
+  /* box-shadow: .3rem .3rem .5rem; */
+  color: #1781d5;
+}
+
+/* --------------------- NAVBAR --------------------- */
+header li,
+header a {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #d6d6d6;
+  text-decoration: none;
+}
+
+.noClick {
+  cursor: default;
+}
+
+.nav_links img {
+  height: 3vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 1%;
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #d6d6d6;
+  font-size: 12px;
+  height: 5vh;
+  font-weight: 500;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  text-transform: uppercase;
+}
+
+.login-nav{
+  position: relative;
+}
+
+.dropBtn{
+  font-size: 16px;
+  font-family: "Poppins", sans-serif; 
+  border-radius: 4px;
+  padding: 5px;
+  background-color: inherit;
+  border: none;
+  color: #d6d6d6;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.dropBtn:active{
+  outline: none;
+}
+
+.dropdown-content{
+  position: fixed;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  width: 15vw;
+  height: auto;
+  z-index: 9;
+  top: 6vh;
+  align-items: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  transition: all 0.3s ease 0s;
+}
+
+.dropdown-content input{
+  height: 3vh;
+  width: 100%;
+  margin: 5px 0;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+}
+
+.dropdown-content input:focus{
+  outline: 2px solid #1781d5;
+}
+
+.dropdown-content .navReg{
+  background-color: #1781d5;
+  color: #fffffc;
+  padding: 8px 5px;
+  border: none;
+  border-radius: 14px;
+  margin: 0 5px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  cursor: pointer;
+  padding-right: 1vw;
+}
+
+.logo:hover {
+  opacity: 0.7;
+}
+
+.nav_links li,
+.nav_cat li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.nav_links li a,
+.nav_cat li a {
+  transition: all 0.3 ease 0s;
+}
+
+.nav_links li a:hover,
+.nav_cat li a:hover,
+.left a:hover , .login-nav a:hover{
+  color: #fff;
+}
+
+.nav-button{
+  background-color: #1781d5;
+  color: #fffffc;
+  padding: 8px 5px;
+  border: none;
+  border-radius: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  cursor: pointer;
+}
+
+.nav-search{
+  display: flex;
+  width: 80%;
+}
+
+.nav-search-form{
+  margin: 0 auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 11fr 1fr;
+}
+
+.nav-search-form input{
+  outline: none;
+  border: none;
+  padding: 1vh;
+}
+
+.nav-search-text{
+  border-radius: 2rem;
+  padding-top: 15px;
+  padding-left: 5px;
+  font-family: "Lato", serif;
+}
+
+.nav-search-text::placeholder{
+  padding-top: 15px;
+  padding-left: 5px;
+  font-family: "Lato", serif;
+}
+
+.nav-search-btn{
+  position: relative;
+  cursor: pointer;
+  background-color: #1781d5;
+  color: #fff;
+  left: -30px;
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
+  font-family: "Poppins", sans-serif; 
+  transition: all .3s ease-in;
+}
+
+.nav-search-btn:hover{
+  background-color: #115d9c;
+}
+
+.nav-search-text:focus {
+  border: 3px solid #1781d5;
+}
+
+
+.korpa-div{
+  font-family: "Lato", serif;
+  margin: 0 1%;
+  width: 10vw;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.korpa-div:hover{
+  border: 1px solid #ccc;
+}
+
+.korpa-label{
+  color: #fffffc;
+  font-size: 1vw;
+  flex: 1;
+  cursor: pointer;
+}
+
+.fa-cart-plus{
+  font-size: 2vw;
+  color: #fffffc;
+  flex: 1;
+  cursor: pointer;
+}
+
+.login-status{
+  text-align: center;
+  width: 70%;
+  background-color: #ccc;
+  font-size: 22px;
+  font-family: "Lato", sans-serif;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+.prijavagreska{
+  color: red;
+  text-align:center;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.prijavauspesna{
+  color: lightgreen;
+  text-align:center;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.korpa-drop{
+  position: fixed;
+  right: 1vw;
+  display: none;
+  flex-direction: column;
+  width: 35vw;
+  height: auto;
+  z-index: 9;
+  top: 6vh;
+  padding: 5px;
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  transition: all 0.3s ease 0s;
+}
+
+.korpadropBtn:hover + .korpa-drop{
+  display: flex;
+}
+
+.table-korpe{
+  width: 100%;
+}
+.korpa-table{
+  font-size: 14px;
+  width: 100%;
+  background-color: #ccc;
+  height: auto;
+  text-align: left;
+}
+
+.korpa-table tr{
+  height: auto;
+}
+
+.akcija-dugme{
+  padding: 2px;
+  margin: 0 5px;
+  color: #fffff1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 5px auto;
+  align-items: center;
+  transition: all 0.3s;
+  width: 100%;
+  font-size: 10px;
+}
+
+.obrisi{
+  background-color: #b62323;
+  border-radius: 10px;
+}
+/* --------------------- NAVBAR --------------------- */
+
+/* --------------------- FOOTER --------------------- */
+.footer {
+  width: 100%;
+  height: auto;
+  background-color: #f5f5f7;
+  overflow: hidden;
+  display: block;
+  margin-bottom: auto;
+}
+
+.top-footer {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-container {
+  width: 33.3%;
+  border: 1px solid #ccc;
+  margin: 5px;
+  min-height: 25vh;
+}
+
+.footer-title {
+  background-color: #d1d1d1;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+
+.footer-content {
+  text-align: justify;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 200;
+  font-family: "Lato", serif;
+}
+
+.footer-kontakt i {
+  font-size: 32px;
+  color: #d1d1d1;
+  padding-right: 10px;
+  max-width: 34px;
+}
+
+.fa-footer-social-icons {
+  width: 100%;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fa-footer-social-icons i {
+  padding: 5px;
+  transition: all 0.5s ease 0s;
+  color: #d1d1d1;
+  font-size: 50px;
+}
+
+.fa-footer-social-icons i:hover {
+  color: #1781d5;
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  height: 3vh;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.footer-bottom .footer-list li {
+  display: inline-block;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* --------------------- FOOTER --------------------- */
+
+/* --------------------- PROIZVODI MAIN-PAGE --------------------- */
+.main-wrapper {
+  width: 100%;
+  margin: 20px 0;
+}
+.product-wrapper {
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  /* ^^^ NAJJEDNOSTAVNIJI NACIN DA SE NAPRAVI RESPONSIVE GRID ^^^ */
+  grid-gap: 2em;
+}
+
+.category-title {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.main-product {
+  transition: all 0.2s ease-in;
+  border: 1px solid #ccc;
+  position: relative;
+  background-color: #fff;
+}
+
+.main-product:hover {
+  box-shadow: .5rem .5rem 2rem rgba(0,0,0,0.2);
+}
+
+.main-product img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.ime_proizvoda{
+  font-weight: 500;
+  text-align: center;
+  margin: 0 15px;
+  padding: 5px 0;
+  font-size: 1.3rem;
+  height: 5rem;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cena_proizvoda{
+  font-weight: 500;
+  text-align: center;
+  margin: 0 15px;
+  padding: 5px 0;
+  font-size: 1.4rem;
+}
+
+.cena_proizvoda {
+  text-align: right;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.dodaj_proizvod {
+  padding: 1rem 2rem;
+  background-color: #1781d5;
+  border-radius: 2rem;
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  transition: all .5s;
+  outline: 0;
+  border: 0;
+  margin: 0 auto;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dodaj_proizvod:hover{
+  transform: translateY(-2px);
+  box-shadow: .5rem .5rem 2rem rgba(0,0,0,0.2);
+}
+
+.detalji_proizvod{
+  width: 80%;
+}
+
+.class_dodaj_proizvod {
+  display: flex;
+  align-items: left;
+  justify-content: flex-end;
+  margin: 5px 15px;
+}
+
+.rez-pretrage{
+  height: 3vh;
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Lato", serif;
+  border-bottom: 1px solid #ccc;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 2vh;
+  box-shadow: .5rem .5rem 3rem rga(0,0,0,0.2);
+  align-items: center;
+  display: flex;
+}
+/* --------------------- PROIZVODI MAIN-PAGE --------------------- */
+.placeholder_reklama {
+  width: 70%;
+  height: 30vh;
+  margin: 10px auto;
+  background-color: #f2f2f2;
+  position: relative;
+  border-radius: 1%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder_reklama_text {
+  color: #1d1d1f;
+  position: absolute;
+  border-right: 5px solid #1781d5;
+  border-left: 5px solid #1781d5;
+  font-size: 3.2em;
+  font-weight: 800;
+  padding: 2%;
+  font-family: "Lato", sans-serif;
+}
+
+.block {
+  background-color: red;
+  width: 70%;
+  height: 40vh;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.sale_proizvodi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 15%;
+}
+
+.hidden{
+  display: none;
+}
+
+/* --------------------- PROIZVODI MAIN-PAGE --------------------- */
+/* --------------------- STRANICA ZA REGISTRACIJU --------------------- */
+
+.wrapper-register{
+  width: 70%;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #F5F5F7;
+}
+
+.wrapper-register h1{
+  font-family: "Poppins", sans-serif;
+}
+
+.form-registracija{
+  font-family: "Lato", serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: .2em;
+  padding: 8px;
+}
+
+.form-registracija input, .form-registracija button{
+  padding: .7em;
+  border: 1px solid #1781d5;
+  border-radius: 4px;
+}
+/* --------------------- STRANICA ZA REGISTRACIJU --------------------- */
+/* --------------------- STRANICA ZA PROIZVOD --------------------- */
+.container-detalji{
+  width: 70%;
+  margin: 15px auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: #fff;
+  grid-gap: 2rem;
+}
+
+.naslov-detalji{
+  font-size: 28px;
+  font-family: "Poppins", sans-serif; 
+}
+
+.detalji-row{
+  display: flex;
+  justify-content: space-between;
+}
+
+.sifra-detalji{
+  padding-bottom: 55px;
+}
+
+.paragraf-detalji{
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 5px;
+  font-family: "Lato", serif;
+}
+
+.detalji-cena{
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.slika-detalji img{
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+.green{
+  background-color: #47c353;
+  border-radius: 4px;
+  padding: 5px;
+  color: #fff;
+}
+.red{
+  background-color: red;
+  color: #fffff1;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.fa-shopping-cart{
+  color: #eee;
+}
+/* --------------------- MEDIA BREAK POINTS --------------------- */
+@media screen and (max-width:1500px){
+  .category-nav{
+    width: 25%;
+    margin-left: auto;
+  }
+  .product-wrapper-svi{
+    margin-right: 4%;
+  }
+  .placeholder_reklama-svi{
+    margin-right: 4%;
+  }
+}
+@media only screen and (max-width: 1165px) and (min-width: 350px) {
+  .cena_proizvoda {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  .placeholder_reklama{
+    height: 20vh;
+  }
+  
+  .placeholder_reklama_text{
+    font-size: 2rem;
+  }
+  .korpa-label{
+    font-size: 1.5vw;
+  }
+  .fa-cart-plus{
+    font-size: 3vw;
+  }
+  
+}
+
+@media only screen and (max-width: 1050px) {
+  .footer {
+    padding: 5px;
+  }
+  .top-footer {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .footer-container {
+    width: 90%;
+    height: auto;
+  }
+  
+  .footer-content {
+    padding: 5px;
+  }
+  .footer-bottom {
+    width: 90%;
+  }
+  .detalji-row{
+    flex-direction: column;
+  } 
+  .side-category-nav{
+    font-size: 2vw;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .footer-bottom {
+    flex-direction: column;
+    padding: 25px;
+  }
+  .dropdown-content{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 6vh;
+    padding: 10%;
+  }
+  .container-detalji{
+    grid-template-columns: 1fr;
+  }
+  .dropdown-content input, .navReg, .nav-button, .dropdown-content span{
+    width: 100%;
+    margin: 4%;
+    text-align: center;
+  }
+  .dropdown-content input{
+    height: 6vh;
+    background-color: #fff;
+  }
+  
+  .logo{
+    display: none;
+  }
+  
+  .side-category-nav{
+    font-size: 3vw;
+  }
+}
+/* --------------------- MEDIA BREAK POINTS --------------------- */
